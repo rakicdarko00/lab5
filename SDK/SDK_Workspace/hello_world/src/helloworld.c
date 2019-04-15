@@ -36,6 +36,8 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "platform.h"
 #include "xparameters.h"
 #include "xio.h"
@@ -43,6 +45,7 @@
 
 
 void print(char *str);
+
 
 int main()
 {
@@ -61,10 +64,35 @@ int main()
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+    //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     set_cursor(350);
     print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+    set_cursor(500);
+    //set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x000000);
+    //set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0x000000);
+    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 'E');
+
+    int i=0;
+    while(1){
+
+    i++;
+    if(i==35){
+    	for(i=35;i>=-44;i--){
+    		draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i);
+    	}
+    }
+    	else{
+    		draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i);
+    	}
 
 
+
+
+    //clear_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+    //clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+    //clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
+
+    }
     return 0;
 }

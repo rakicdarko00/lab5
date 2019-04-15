@@ -9,6 +9,7 @@
 /***************************** Include Files *******************************/
 
 #include "vga_periph_mem.h"
+#include<math.h>
 Xuint32 cursor_position;
 /************************** Function Definitions ***************************/
 
@@ -23,6 +24,10 @@ void clear_text_screen(Xuint32 BaseAddress){
 	}
 }
 
+void print_char(Xuint32 BaseAddress, unsigned char string_s){
+		VGA_PERIPH_MEM_mWriteMemory(BaseAddress + TEXT_MEM_OFF + cursor_position, (string_s-64));
+}
+
 void print_string(Xuint32 BaseAddress, unsigned char string_s[], int lenght){
 	int i;
 	for (i = 0; i < lenght; i++){
@@ -35,6 +40,10 @@ void clear_graphics_screen(Xuint32 BaseAddress){
 	for (i = 0; i < 9600; i++){
 	    VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
 	}
+}
+void clear_screen(Xuint32 BaseAddress){
+	clear_graphics_screen(BaseAddress);
+	clear_text_screen(BaseAddress);
 }
 
 void draw_square(Xuint32 BaseAddress){
@@ -51,3 +60,34 @@ void draw_square(Xuint32 BaseAddress){
 			}
 		}
 }
+
+
+void draw_rectangle(Xuint32 BaseAddress){
+	int i, j, k;
+			for (j = 0; j < 480; j++){
+				for (k = 0; k<(640/32); k++){
+					i = j*(640/32) + k;
+					if ((j > 200) && (j < 280) && (k > 10) && (k < 12)) {
+						VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
+					}
+					else{
+						VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0x0);
+					}
+				}
+			}
+}
+
+
+
+void set_foreground_color(Xuint32 BaseAddress, Xuint32 color)
+{
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x00000010 , (color&0x00FFFFFF));
+}
+
+
+void set_background_color(Xuint32 BaseAddress, Xuint32 color)
+{
+	VGA_PERIPH_MEM_mWriteMemory(BaseAddress + 0x00000014 , (color&0x00FFFFFF));
+}
+
+

@@ -137,3 +137,240 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:17:06.501 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:17:09.781 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:17:09.827 INFO  - Copied contents of D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+09:17:09.831 INFO  - Copied contents of D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:17:09.832 INFO  - Copied contents of D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:17:11.189 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:17:12.594 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:17:13.696 INFO  - Updating hardware inferred compiler options for hello_world. 
+09:17:13.712 INFO  - Clearing existing target manager status. 
+09:17:59.309 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:18:01.406 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:18:01.419 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:18:01.456 WARN  - Unable to determine location of documentation for OS . 
+09:18:01.459 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:18:01.465 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:19:02.570 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:19:22.039 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:20:11.491 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:20:14.347 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:20:14.384 ERROR - Unable to read in MSS file D:\RA1-2016\LPRS2\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:24:48.861 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:24:55.658 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:25:15.781 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:25:42.025 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+MicroBlaze Pipeline Stalled on a Blocking Instruction or Invalid Bus Access
+    Stalled PC: 0x3ffffffc
+    Try Resetting the Processor to Continue..
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:26:03.169 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+MicroBlaze Pipeline Stalled on a Blocking Instruction or Invalid Bus Access
+    Stalled PC: 0x3ffffffc
+    Try Resetting the Processor to Continue..
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:26:23.718 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+MicroBlaze Pipeline Stalled on a Blocking Instruction or Invalid Bus Access
+    Stalled PC: 0x3ffffffc
+    Try Resetting the Processor to Continue..
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:26:58.123 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+MicroBlaze Pipeline Stalled on a Blocking Instruction or Invalid Bus Access
+    Stalled PC: 0x3ffffffc
+    Try Resetting the Processor to Continue..
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:36:49.459 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+MicroBlaze Pipeline Stalled on a Blocking Instruction or Invalid Bus Access
+    Stalled PC: 0x3ffffffc
+    Try Resetting the Processor to Continue..
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:38:13.632 INFO  - FPGA configured successfully with bitstream "D:/RA1-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:28:15.559 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:12:34.213 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:13:12.833 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:17:16.491 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:18:57.346 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:19:26.905 INFO  - FPGA configured successfully with bitstream "D:/RA1-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:20:09.765 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Cannot perform the Debug Command
+
+    Failed to lock the JTAG cable for exclusive access
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+09:20:34.034 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:20:51.507 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:21:06.077 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:21:18.515 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:21:51.452 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:22:06.468 INFO  - FPGA configured successfully with bitstream "D:/RA1-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:23:01.410 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:23:27.086 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:23:34.091 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:23:42.231 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:24:03.937 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:24:13.062 INFO  - FPGA configured successfully with bitstream "D:/RA1-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:38:26.629 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:38:32.526 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:38:40.995 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:45:33.147 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:46:29.798 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:48:59.626 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:49:24.694 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:49:36.769 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:49:54.803 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:50:05.566 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:50:08.044 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:50:19.116 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:50:31.120 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:50:42.788 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:51:17.468 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+09:51:24.854 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:51:55.412 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+09:52:09.355 INFO  - FPGA configured successfully with bitstream "D:/RA1-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:52:36.873 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:54:47.835 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:55:07.195 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:55:27.045 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:55:41.257 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:56:35.636 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:56:50.897 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:57:22.191 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:58:30.849 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:58:37.549 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:58:52.908 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:59:22.482 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:59:40.656 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:00:03.911 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:00:18.485 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:00:29.157 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:00:51.217 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:01:07.404 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:01:48.862 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:07.720 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:02:31.993 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:07:53.963 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:15:04.330 INFO  - Processing command line option -hwspec D:\RA1-2016\LPRS2\lab5\SDK\SDK_Export\hw\system.xml. 
+10:17:01.636 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+10:19:57.109 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+10:19:57.208 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+10:30:05.000 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
