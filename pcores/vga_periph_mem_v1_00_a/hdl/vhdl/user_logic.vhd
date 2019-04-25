@@ -194,7 +194,7 @@ architecture IMP of user_logic is
   constant REG_ADDR_06       : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 6, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_07_v_sync: std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 7, GRAPH_MEM_ADDR_WIDTH);
   constant REG_ADDR_08_en    : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 8, GRAPH_MEM_ADDR_WIDTH);
-  constant REG_ADDR_09_fram_cnt    : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 9, GRAPH_MEM_ADDR_WIDTH);
+  constant REG_ADDR_09_frame_cnt    : std_logic_vector(GRAPH_MEM_ADDR_WIDTH-1 downto 0) := conv_std_logic_vector( 9, GRAPH_MEM_ADDR_WIDTH);
   
   
   constant update_period     : std_logic_vector(31 downto 0) := conv_std_logic_vector(1, 32);
@@ -381,7 +381,7 @@ begin
 	tc				 <= '1' when (dir_pixel_row = v_sync_cnt_tc) else '0';
 	
 	
-	irq			 <= tc and end;
+	irq			 <= tc and en;
 	irq_o 		 <= irq;
     
 --  direct_mode      <= '0';

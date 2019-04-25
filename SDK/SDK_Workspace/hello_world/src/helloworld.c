@@ -41,16 +41,56 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xio.h"
+#include "xil_exception.h"
+#include "xintc.h"
 #include "vga_periph_mem.h"
 
+XIntc Intc;
+
+void my_timer_interrupt_handler(void * baseaddr_p){
+	xil_printf("\n\rtimer timeout.");
+}
 
 void print(char *str);
 
 
+#define XPAR_INTC_0_VGA_PERIPH_MEM_0_VEC_ID 0x1
+
 int main()
 {
+	unsigned char string_s[] = "LPRS 2\n";
     init_platform();
-    unsigned char string_s[] = "LPRS 2\n";
+    XStatus Status;
+    Xuint32 value1,value2,value3;
+
+    xil_printf("Interrupt example\n\r");
+
+    XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+ 0x0, 0x5F5E100);
+
+    XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x4, 0x2);
+
+
+    value1 = XIo_In32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x0);
+    xil_printf("\n\rvalue1 = %x.", value1);
+
+    Status = XIntc_Initialize(&Intc,XPAR_INTC_0_DEVICE_ID);
+
+    if(Status != XST_SUCCESS) xil_printf ("\r\nInterrupt controller initialization failure");
+    else xil_printf("\r\nInterrupt controller initialized");
+
+    Status = XIntc_Connect (&Intc,XPAR_INTC_0_VGA_PERIPH_MEM_0_VEC_ID,(XInterruptHandler)my_timer_interrupt_handler,(void*)0);
+
+
+    if(Status != XST_SUCCESS) xil_printf ("\r\nRegistering MY_TIMER Interrupt Failed");
+    else xil_printf("\r\nMY_TIMER Interrupt registered");
+
+    Status = XIntc_Start(&Intc, XIN_REAL_MODE);
+
+    microblaze_enable_interrupts();
+
+    XIntc_Enable  (&Intc, XPAR_INTC_0_VGA_PERIPH_MEM_0_VEC_ID);
+
+
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -94,5 +134,6 @@ int main()
 
 
     }
+    cleanup_platform();
     return 0;
 }
